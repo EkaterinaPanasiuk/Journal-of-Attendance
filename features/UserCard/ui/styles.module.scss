@@ -1,0 +1,107 @@
+@import "../../../app/index.scss";
+$color-hover-card: #eaf6ff;
+$color-text: #353535;
+$color-text-role: #8f8f8f;
+$color-bg-subject: #eaf6ff;
+$color-text-subject: #001f70;
+
+$color-bg-not-active-card: #eaebed;
+
+.userCardWrapper {
+  width: 220px;
+  height: 196px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 11px;
+  border-radius: 12px;
+  box-shadow: 2px 3px 14px 2px #2133600f;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: $color-white;
+  & .userTitle {
+    position: relative;
+  }
+  &:hover {
+    box-shadow: 0px 15px 14px -6px #21336042;
+  }
+  * {
+    text-align: left;
+  }
+  h4 {
+    height: 21px;
+    vertical-align: bottom;
+    @extend %subtitle;
+  }
+  h6 {
+    vertical-align: bottom;
+    @extend %subtitle;
+    font-weight: 400;
+    margin: 0 0 8px;
+    white-space: nowrap;
+  }
+}
+
+.roleWrapper {
+  margin-bottom: 16px;
+  p {
+    @extend %text;
+    font-size: 12px;
+    color: $color-text-role;
+  }
+}
+
+.subjectWrapper {
+  width: 100%;
+  height: auto;
+  span {
+    display: inline-block;
+    color: $color-text-subject;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    text-align: center;
+    background-color: antiquewhite;
+    padding: 3px 4px 4px 4px;
+    background: $color-bg-subject;
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-top: 6px;
+  }
+}
+
+.notActive {
+  background-color: $color-bg-not-active-card;
+  h4 {
+    color: $color-text;
+  }
+  h6 {
+    color: $color-text;
+  }
+  .roleWrapper {
+    p {
+      color: $color-text;
+    }
+  }
+  span {
+    color: $color-text;
+    background: $color-white;
+  }
+}
+.readyToAtive {
+  background-color: $color-white;
+  border: 2px solid #ffcf96;
+  h4 {
+    overflow: hidden;
+    &:after {
+      content: url("../../../shared/assets/alert-triangle.svg");
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+    }
+  }
+}

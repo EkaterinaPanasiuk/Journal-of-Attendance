@@ -1,0 +1,7 @@
+@import "../../app/index.scss";
+
+.usersFilterWraper {
+  @include display-flex-center;
+  gap: 10px;
+  flex-wrap: wrap;
+}

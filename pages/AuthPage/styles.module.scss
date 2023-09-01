@@ -1,0 +1,8 @@
+@import "../../app/index.scss";
+.container {
+  @extend %pageWrapper;
+
+  @media (min-width: 768px) {
+    background: url("../../shared/assets/BG_auth.png") center center no-repeat;
+  }
+}

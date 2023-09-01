@@ -1,0 +1,13 @@
+@import "../../app/styles/index.scss";
+.usersCardsWrapper {
+  width: calc(100% + 20px);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  @include xxl {
+    padding-right: 20px;
+  }
+}

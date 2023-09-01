@@ -1,0 +1,62 @@
+@import "../../../app/index.scss";
+
+.pageWrapper {
+  background-color: $color-light3;
+  padding: 40px 38px 40px 300px;
+  min-width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+}
+.disableScroll {
+  background-color: $color-light3;
+  padding: 40px 38px 40px 300px;
+  min-width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.usersTitle {
+  display: flex;
+  font-weight: 600;
+  font-size: 24px;
+  color: $color-dark;
+}
+
+.userBlock {
+  @include display-flex-row-spaseBetween;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+.firstRow {
+  width: 100%;
+  @include display-flex-row-spaseBetween;
+  row-gap: 12px;
+  flex-wrap: wrap;
+}
+.userAddBlock {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 12px;
+}
+
+.filtersBlock {
+  @include display-flex-row-spaseBetween;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

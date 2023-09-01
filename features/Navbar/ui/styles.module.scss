@@ -1,0 +1,69 @@
+@import "../../../app/index";
+
+.nav {
+  height: 100vh;
+  width: 260px;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: $color-white;
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 3px 14px 2px #2133600d;
+}
+
+.logo {
+  height: 60px;
+  @include display-flex-center;
+
+  & img {
+    width: 54px;
+    margin-left: 40px;
+  }
+}
+
+.navItem {
+  & a,
+  button {
+    height: 60px;
+    background-color: inherit;
+    width: 100%;
+    padding-left: 42px;
+    @include display-flex-center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    color: $color-dark;
+
+    &.active {
+      color: $color-primary;
+      background-color: $color-gray-light3;
+    }
+  }
+}
+.userItem {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding-left: 36px;
+  column-gap: 10px;
+  & .userIcon {
+    width: 24px;
+    height: 24px;
+    @include display-flex-row-centr-centr;
+    font-size: 10px;
+    color: $color-primary;
+    background-color: $color-gray-light2;
+    border-radius: 50%;
+    cursor: default;
+  }
+  & .userName {
+    display: flex;
+    font-size: 14px;
+    line-height: 130%;
+    color: #353535;
+  }
+}

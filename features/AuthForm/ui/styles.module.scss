@@ -1,0 +1,21 @@
+@import "../../../app/index.scss";
+.form {
+  width: 100%;
+  max-width: 390px;
+}
+.title {
+  @extend %title;
+}
+
+.errorMessage {
+  @extend %text-error;
+}
+.passwordInputWrapper {
+  /* @include sl {
+    margin-bottom: 24px;
+  } */
+  margin-bottom: 4px;
+}
+.nameInputWrapper {
+  margin-bottom: 12px;
+}

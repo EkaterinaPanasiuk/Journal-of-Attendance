@@ -1,0 +1,162 @@
+@import "../../../app/styles/index.scss";
+
+.content {
+  @include display-flex-col-start();
+  justify-content: space-between;
+  max-width: 940px;
+  min-height: 620px;
+  padding: 30px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background-color: $color-white;
+  box-shadow: 2px 3px 14px 2px rgba(33, 51, 96, 0.06);
+}
+
+.userInfo {
+  @include display-flex-col-start();
+  gap: 24px;
+  align-self: stretch;
+}
+
+.rowBtns {
+  @include display-flex-row-spaseBetween();
+  align-self: stretch;
+  width: 100%;
+}
+.rightPosition {
+  @include display-flex-start();
+  gap: 28px;
+}
+.titleRrow {
+  @include display-flex-row-spaseBetween();
+  align-items: flex-start;
+  width: 100%;
+}
+.toggleBlock {
+  @include display-flex-row-spaseBetween();
+  width: 200px;
+  height: 44px;
+  flex-shrink: 0;
+  padding: 12px 24px;
+  border-radius: 8px;
+  background-color: $color-gray-light3;
+  & > span {
+    @extend %text;
+    color: $color-primary;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+  }
+  &.deactive {
+    background-color: $color-light4;
+    & > span {
+      color: $color-warning;
+    }
+  }
+}
+.userTitle {
+  color: $color-dark;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.infoWrapper {
+  @include display-flex-col-start();
+  gap: 24px;
+}
+
+.userInputs {
+  @include display-flex-start();
+  gap: 50px;
+  flex-wrap: wrap;
+  & label {
+    font-size: 12px;
+    line-height: 1.1;
+  }
+}
+
+.deleteBtn {
+  @extend %button-edit-card;
+  background-color: $color-light5;
+  color: $color-danger;
+}
+
+.cancelBtn {
+  @extend %button-edit-card;
+  width: 136px;
+  background-color: $color-light4;
+  color: $color-warning;
+}
+
+.saveBtn {
+  @extend %button-edit-card;
+  background-color: $color-warning;
+  color: $color-white;
+}
+
+.cardTitle {
+  @extend %text;
+  font-style: normal;
+}
+
+.userRoles {
+  @include display-flex-start();
+  column-gap: 12px;
+  flex-wrap: wrap;
+  max-width: 403px;
+  row-gap: 4px;
+}
+
+.inputWrapper {
+  @include display-flex-col-start();
+  gap: 16px;
+}
+
+.inputWrapperWithBtn {
+  @include display-flex-col-start();
+  gap: 16px;
+  width: 300px;
+}
+
+.passGeneratorIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 1;
+}
+
+.errorMsg {
+  color: #ff4c4c;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+}
+.userLabel {
+  @extend %text;
+  align-self: stretch;
+  color: $color-gray-placeholder;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.userInput {
+  @include display-flex-center();
+  width: 300px;
+  height: 44px;
+  padding: 8px 16px;
+  gap: 12px;
+  flex-shrink: 0;
+  align-self: stretch;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  border: 2px solid $color-gray-light;
+  background-color: $color-gray-light4;
+  & .errorMessage {
+    align-self: stretch;
+    line-height: 120%;
+  }
+}

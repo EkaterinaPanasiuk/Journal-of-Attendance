@@ -1,0 +1,8 @@
+@import "./styles/index.scss";
+.app {
+  width: auto;
+  min-height: 100vh;
+  font-family: $font;
+  display: flex;
+  position: relative;
+}

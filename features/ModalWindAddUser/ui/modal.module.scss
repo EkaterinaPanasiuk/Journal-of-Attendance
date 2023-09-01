@@ -1,0 +1,311 @@
+@import "../../../app/styles/index.scss";
+* {
+  font-family: $font;
+}
+
+.modalField {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 90px 0;
+}
+.modalWrapper {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 688px;
+  min-height: 653px;
+  gap: 24px;
+  padding: 32px;
+  border-radius: 20px;
+  background-color: $color-white;
+  box-shadow: 2px 3px 14px 2px rgba(33, 51, 96, 0.06);
+  position: relative;
+}
+.displayNone {
+  display: none;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.title {
+  width: 100%;
+  color: $color-dark;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.userRole {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+}
+
+.userRoleTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  color: $color-dark;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.userRoleFilter {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 12px;
+  row-gap: 4px;
+  max-width: 275px;
+  flex-wrap: wrap;
+}
+
+.userRoleButton,
+.activeUserRoleButton {
+  display: flex;
+  height: 30px;
+  padding: 10px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  color: $color-dark;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  &.active {
+    padding: 6px 12px;
+    border: 1px solid $color-primary;
+    color: $color-primary;
+    font-weight: 600;
+  }
+}
+.activeUserRoleButton {
+  color: $color-primary;
+  border: 1px solid $color-primary;
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-image: url("../../../shared/assets/check.png");
+  }
+}
+.error {
+  & .userRoleButton {
+    border-color: #ff4c4c;
+  }
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.userData {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  label + div {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
+.errorMsg {
+  color: $color-danger;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.userDataWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.dataTitle {
+  color: $color-dark;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.userInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.userLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-items: stretch;
+  width: 300px;
+}
+
+.userLabelTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: stretch;
+  color: $color-gray;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.userInputWrapper {
+  display: flex;
+  height: 44px;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+}
+
+.userInput {
+  display: flex;
+  width: 100%;
+  height: 44px;
+  padding: 8px 16px;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-radius: 8px;
+  border: 2px solid $color-gray-light;
+  background-color: $color-white;
+  color: $color-dark;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  & :focus {
+    border-color: $color-primary;
+  }
+}
+
+.passwordWithBtn {
+  display: flex;
+  align-items: flex-end;
+  align-self: stretch;
+  width: 300px;
+  gap: 12px;
+  & label {
+    width: 244px;
+  }
+  & button {
+    height: 2.3lh;
+  }
+}
+
+.passwordBtn {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: solid 2px $color-gray-light;
+  background-color: $color-white;
+}
+
+div:has([data-testid="errorMessage"]) + .passwordBtn {
+  margin-bottom: 19px;
+}
+
+.btnIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+}
+
+.rowButtons {
+  display: flex;
+  height: 44px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.cancelBtn {
+  display: flex;
+  height: 44px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background-color: $color-light4;
+  color: $color-warning;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.addBtn {
+  display: flex;
+  height: 44px;
+  padding: 10px 24px 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 8px;
+  background-color: $color-warning;
+  color: $color-white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.crossBtn {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  border-radius: 8px;
+  background-color: $color-gray-light4;
+}
+
+.passGeneratorIcon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 1;
+}

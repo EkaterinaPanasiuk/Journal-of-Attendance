@@ -1,0 +1,17 @@
+@import "../../app/index.scss";
+
+.sortWrapper {
+  display: flex;
+  align-items: center;
+
+  & button {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    background-color: $color-white;
+    border: 1px solid $color-gray-light;
+    border-radius: 8px;
+    padding: 5px;
+  }
+}

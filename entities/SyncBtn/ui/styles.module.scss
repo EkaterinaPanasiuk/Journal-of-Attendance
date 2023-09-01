@@ -1,0 +1,32 @@
+.btn {
+  &.syncBtn {
+    padding-left: 40px;
+    padding-top: 16px;
+    align-items: flex-start;
+    text-align: left;
+    color: #49aaf5;
+    &:hover {
+      color: #001f70;
+    }
+    &.syncBtnAnim {
+      color: #001f70;
+      & svg {
+        animation: spin 2s linear infinite;
+      }
+    }
+    & .syncTime {
+      padding-top: 6px;
+      color: #9ea0a5;
+      font-size: 8px;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
