@@ -1,0 +1,105 @@
+@import "../../../app/index.scss";
+
+.btn {
+  @extend %btn;
+  &.classic {
+    height: 44px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-align: center;
+    font-family: $font;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%;
+    margin: 0;
+    &.orange {
+      background-color: $color-warning;
+      color: $color-white;
+    }
+  }
+  &.orange {
+    background-color: $color-warning;
+    color: $color-white;
+  }
+
+  &.normal {
+    width: 121px;
+    height: 34px;
+    font-weight: 600;
+    font-size: 14px;
+    gap: 6px;
+    margin: 0;
+    &.warning {
+      color: $color-white;
+      background-color: $color-warning;
+    }
+
+    &.primary {
+      color: $color-white;
+      background-color: $color-primary;
+      box-shadow: 0 4px 0 $color-primary-dark;
+
+      &:active {
+        box-shadow: 0px -4px 0px $color-primary-dark;
+        transform: translateY(4px);
+      }
+    }
+  }
+  &.medium {
+    width: 171px;
+    height: 44px;
+    padding: 10px 24px 12px 24px;
+    font-weight: 600;
+    line-height: 130%;
+    text-align: center;
+    margin: 0;
+    gap: 4px;
+    &.warning {
+      color: $color-white;
+      background-color: $color-warning;
+    }
+  }
+  &.large {
+    width: 100%;
+    max-width: 390px;
+    height: 50px;
+    text-transform: uppercase;
+    /* display: flex;
+width: 300px;
+height: 50px;
+padding: 12px 24px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0; 
+border-radius: 8px;
+background: #FF9B00;*/
+    &.warning {
+      color: $color-white;
+      background-color: $color-warning;
+      //  box-shadow: 0 6px 0 $color-warning-dark;
+
+      &:active {
+        box-shadow: 0px -6px 0px $color-warning-dark;
+        transform: translateY(6px);
+      }
+    }
+
+    &.primary {
+      color: $color-white;
+      background-color: $color-primary;
+      box-shadow: 0 6px 0 $color-primary-dark;
+
+      &:active {
+        box-shadow: 0px -6px 0px $color-primary-dark;
+        transform: translateY(6px);
+      }
+    }
+  }
+}
+.authBtn {
+  margin-top: 40px;
+  @include sl {
+    margin-top: 24px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../../../app/index.scss";
+.imgLogo {
+  width: 75px;
+  height: 60px;
+  @include ml {
+    width: 100px;
+    height: 80px;
+  }
+}

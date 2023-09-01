@@ -1,0 +1,9 @@
+@import "../../../app/index.scss";
+
+.active {
+  text-shadow: 0 0 10px #c00;
+}
+
+.unactive {
+  color: lightgray;
+}

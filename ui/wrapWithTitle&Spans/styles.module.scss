@@ -1,0 +1,55 @@
+@import "../../../app/styles/index.scss";
+.itemsWrapper {
+  width: 100%;
+  padding: 0 0 32px;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #eaebed;
+  &:last-child {
+    border-bottom: none;
+  }
+}
+%span {
+  display: inline-block;
+  padding: 6px 8px;
+  text-align: left;
+  font-size: 14px;
+  font-family: Open Sans;
+  line-height: 130%;
+}
+
+.violet {
+  @extend %span;
+  color: #2d0fe4;
+  background-color: #f5f7f9;
+}
+.itemList {
+  padding-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 8px;
+  column-gap: 10px;
+}
+.emptyList {
+  padding-top: 12px;
+  font-size: 14px;
+  font-style: italic;
+  color: $color-gray;
+}
+.itemTitle {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: $font;
+  line-height: 130%;
+}
+.green {
+  @extend %span;
+  color: #0d576d;
+  background-color: #f1fffd;
+}
+.blue {
+  @extend %span;
+  color: #001f70;
+  background-color: #f5fbff;
+}

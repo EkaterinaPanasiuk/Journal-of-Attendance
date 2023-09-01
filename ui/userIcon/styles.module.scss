@@ -1,0 +1,63 @@
+@import "../../../app/styles/index.scss";
+.userItem {
+  @include display-flex-start-center;
+  column-gap: 16px;
+  & h4 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 130%;
+  }
+}
+.userIcon {
+  color: $color-primary;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: $color-gray-light3;
+  position: relative;
+  span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.activeRoleWrapper {
+  @include display-flex-start-center;
+  column-gap: 8px;
+  margin-top: 8px;
+}
+.active {
+  * {
+    display: block;
+  }
+  @include display-flex-start-center;
+  color: $color-green;
+  span:first-child {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+    background-color: $color-green;
+  }
+}
+.notActive {
+  * {
+    display: block;
+  }
+  @include display-flex-start-center;
+  color: $color-danger;
+  span:first-child {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 4px;
+    background-color: $color-danger;
+  }
+}
+.roleWrapper {
+  p {
+    color: $color-text-user-role;
+  }
+}

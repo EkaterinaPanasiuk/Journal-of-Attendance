@@ -1,0 +1,10 @@
+@import "../../../app/index.scss";
+.logoWrapper {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+  text-align: center;
+  @include ml {
+    margin-bottom: 16px;
+  }
+}

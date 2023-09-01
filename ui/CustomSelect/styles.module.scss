@@ -1,0 +1,68 @@
+@import "../../../app/index.scss";
+
+.option {
+  color: $color-dark;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  width: 170px;
+  height: 30px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  &:hover {
+    cursor: pointer;
+    background-color: #f5f7f9;
+  }
+}
+
+.dropdown {
+  position: absolute;
+  top: 110%;
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  border-radius: 8px;
+  z-index: 5;
+}
+
+.customSelect {
+  position: relative;
+}
+
+.selectedValue {
+  color: $color-dark;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 120%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  gap: 8px;
+  width: 170px;
+  height: 30px;
+  background-color: $color-white;
+  border: 1px solid $color-gray-light;
+  border-radius: 8px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.vector {
+  width: 10px;
+  height: 5px;
+  position: absolute;
+  right: 12%;
+}
